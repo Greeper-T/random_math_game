@@ -326,9 +326,9 @@ public class HelloController {
     private int totalNumOfIntigers = 2;
     private String operation = "addition";
     private ArrayList<Integer> randomNumbers = new ArrayList<>();
-    private int additionCorrect = 0;
+    private int additionCorrect = 50;
     private int subtractionCorrect = 0;
     private int multiplacationCorrect = 0;
     private int divitionCorrect = 0;
-    public String currentDifficulty = "easy";
+    public String currentDifficulty = "hard";
 }
