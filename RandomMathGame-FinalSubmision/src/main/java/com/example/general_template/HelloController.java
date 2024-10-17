@@ -7,7 +7,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.image.Image;
-import java.io.*;
+
 import java.util.*;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -176,7 +176,7 @@ public class HelloController {
         StringBuilder quetions = new StringBuilder("what is ");
         while (true){
             randomNumbers.clear();
-            for (int i = 0; i<totalNumOfIntigers; i++){
+            for (int i = 0; i< totalNumOfIntegers; i++){
                 if (operation.equals("division")){
                     randomNumbers.add(random(1,highestNum*4));
                 }else if (operation.equals("multiplication")){
@@ -195,7 +195,7 @@ public class HelloController {
         if (operation.equals("division")){
             quetions.append("/").append(randomNumbers.get(1));
         }
-        for (int i = 1; i<totalNumOfIntigers; i++){
+        for (int i = 1; i< totalNumOfIntegers; i++){
             switch (operation) {
                 case "addition" -> quetions.append("+").append(randomNumbers.get(i));
                 case "subtraction" -> quetions.append("-").append(randomNumbers.get(i));
@@ -208,23 +208,23 @@ public class HelloController {
 
     public void addOneInt(ActionEvent actionEvent) {
         if (!operation.equals("division")){
-            totalNumOfIntigers += 1;
-            numberOfInts.setText(String.valueOf(totalNumOfIntigers));
+            totalNumOfIntegers += 1;
+            numberOfInts.setText(String.valueOf(totalNumOfIntegers));
         }
     }
 
     public void subOneInt(ActionEvent actionEvent) {
-        if (totalNumOfIntigers >= 3 && !operation.equals("division")){
-            totalNumOfIntigers -= 1;
-            numberOfInts.setText(String.valueOf(totalNumOfIntigers));
+        if (totalNumOfIntegers >= 3 && !operation.equals("division")){
+            totalNumOfIntegers -= 1;
+            numberOfInts.setText(String.valueOf(totalNumOfIntegers));
         }
     }
 
     public void division(ActionEvent actionEvent) {
         operation = "division";
         operationLbl.setText("current operation: division");
-        totalNumOfIntigers = 2;
-        numberOfInts.setText(String.valueOf(totalNumOfIntigers));
+        totalNumOfIntegers = 2;
+        numberOfInts.setText(String.valueOf(totalNumOfIntegers));
     }
 
     public void easy(ActionEvent actionEvent) {
@@ -323,7 +323,7 @@ public class HelloController {
     }
 
     private int highestNum = 10;
-    private int totalNumOfIntigers = 2;
+    private int totalNumOfIntegers = 2;
     private String operation = "addition";
     private ArrayList<Integer> randomNumbers = new ArrayList<>();
     private int additionCorrect = 50;
