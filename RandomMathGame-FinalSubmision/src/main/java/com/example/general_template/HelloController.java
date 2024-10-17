@@ -329,6 +329,6 @@ public class HelloController {
     private int additionCorrect = 50;
     private int subtractionCorrect = 0;
     private int multiplacationCorrect = 0;
-    private int divitionCorrect = 0;
+    private int divitionCorrect = Integer.MAX_VALUE;
     public String currentDifficulty = "hard";
 }
