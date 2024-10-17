@@ -328,7 +328,7 @@ public class HelloController {
     private ArrayList<Integer> randomNumbers = new ArrayList<>();
     private int additionCorrect = 50;
     private int subtractionCorrect = Integer.MIN_VALUE;
-    private int multiplacationCorrect = 0;
+    private double multiplacationCorrect = 0.0;
     private int divitionCorrect = Integer.MAX_VALUE;
     public String currentDifficulty = "hard";
 }
