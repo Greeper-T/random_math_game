@@ -49,7 +49,7 @@
                   <Font size="52.0" />
                </font>
             </Button>
-            <Button layoutX="167.0" layoutY="226.0" mnemonicParsing="false" onAction="#toAchivements" text="achivements">
+            <Button layoutX="167.0" layoutY="226.0" mnemonicParsing="false" onAction="#toAchivements" text="nonAchivements because">
                <font>
                   <Font size="39.0" />
                </font>
