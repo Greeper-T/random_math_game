@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.general_template.HelloController">
+   <children>
+      <AnchorPane fx:id="gameScreen" disable="true" layoutY="5.0" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="29.0" layoutY="101.0" mnemonicParsing="false" onAction="#add" text="addition" />
+            <TextField fx:id="answer" layoutX="116.0" layoutY="219.0" />
+            <Label fx:id="quetion" layoutX="170.0" layoutY="192.0" text="quetion" />
+            <Button layoutX="101.0" layoutY="101.0" mnemonicParsing="false" onAction="#sub" text="subtraction" />
+            <Button layoutX="199.0" layoutY="101.0" mnemonicParsing="false" onAction="#mult" text="multiplication" />
+            <Button layoutX="147.0" layoutY="266.0" mnemonicParsing="false" onAction="#checkAnswer" text="check answer" />
+            <Label fx:id="correctOrIncorrect" layoutX="154.0" layoutY="309.0" text="are you right?" />
+            <Button layoutX="136.0" layoutY="150.0" mnemonicParsing="false" onAction="#generateQuetion" text="generate quetion" />
+            <Label fx:id="operationLbl" layoutX="415.0" layoutY="105.0" text="current operation: addition" />
+            <Button layoutX="422.0" layoutY="188.0" mnemonicParsing="false" onAction="#addOneInt" text="+1" />
+            <Button layoutX="424.0" layoutY="229.0" mnemonicParsing="false" onAction="#subOneInt" text="-1" />
+            <Label layoutX="422.0" layoutY="162.0" text="number of intigers used" />
+            <Label fx:id="numberOfInts" layoutX="502.0" layoutY="214.0" text="2" />
+            <Button layoutX="313.0" layoutY="101.0" mnemonicParsing="false" onAction="#division" text="division" />
+            <Button layoutX="69.0" layoutY="56.0" mnemonicParsing="false" onAction="#easy" text="easy" />
+            <Button layoutX="169.0" layoutY="56.0" mnemonicParsing="false" onAction="#medium" text="medium" />
+            <Button layoutX="300.0" layoutY="56.0" mnemonicParsing="false" onAction="#hard" text="hard" />
+            <Label fx:id="difficulty" layoutX="428.0" layoutY="60.0" text="current difficulty: easy" />
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#gameToMain" text="back" />
+            <Label fx:id="additionRight" layoutX="359.0" layoutY="292.0" text="addition answered: 0" />
+            <Label fx:id="subtractionRight" layoutX="358.0" layoutY="315.0" text="subtraction answered: 0" />
+            <Label fx:id="multiplacationRight" layoutX="358.0" layoutY="339.0" text="multiplication answered: 0" />
+            <Label fx:id="divitionRight" layoutX="358.0" layoutY="364.0" text="division answered: 0" />
+            <Text layoutX="358.0" layoutY="283.0" strokeType="OUTSIDE" strokeWidth="0.0" text="these only add up when in hard mode" underline="true">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="mainScreen" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="214.0" layoutY="62.0" mnemonicParsing="false" onAction="#toGame" text="start">
+               <font>
+                  <Font size="52.0" />
+               </font>
+            </Button>
+            <Button layoutX="167.0" layoutY="226.0" mnemonicParsing="false" onAction="#toAchivements" text="achivements">
+               <font>
+                  <Font size="39.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="achivementScreen" disable="true" prefHeight="400.0" prefWidth="600.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#achivementToMain" text="back" />
+            <ImageView fx:id="bronzeAddition" fitHeight="41.0" fitWidth="42.0" layoutX="104.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="79.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="addition mastery:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="100.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 quetions" />
+            <Text layoutX="232.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 quetions" />
+            <ImageView fx:id="silverAddition" fitHeight="41.0" fitWidth="42.0" layoutX="242.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="359.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 quetions" />
+            <ImageView fx:id="goldAddition" fitHeight="41.0" fitWidth="40.0" layoutX="373.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="73.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="subtraction mastery:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="70.0" layoutY="236.0" strokeType="OUTSIDE" strokeWidth="0.0" text="multiplication mastery:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="69.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="divition mastery:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Text>
+            <Text layoutX="94.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 quetions" />
+            <Text layoutX="91.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 quetions" />
+            <Text layoutX="95.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="10 quetions" />
+            <Text layoutX="232.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 quetions" />
+            <Text layoutX="229.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 quetions" />
+            <Text layoutX="227.0" layoutY="346.0" strokeType="OUTSIDE" strokeWidth="0.0" text="50 quetions" />
+            <Text layoutX="359.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 quetions" />
+            <Text layoutX="359.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 quetions" />
+            <Text layoutX="364.0" layoutY="345.0" strokeType="OUTSIDE" strokeWidth="0.0" text="100 quetions" />
+            <ImageView fx:id="bronzeSubtraction" fitHeight="41.0" fitWidth="42.0" layoutX="104.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="silverSubtraction" fitHeight="41.0" fitWidth="42.0" layoutX="242.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="goldSubtraction" fitHeight="41.0" fitWidth="42.0" layoutX="372.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="bronzeMultiplacation" fitHeight="41.0" fitWidth="42.0" layoutX="101.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="silverMultiplacation" fitHeight="41.0" fitWidth="42.0" layoutX="238.0" layoutY="265.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="goldMultiplacation" fitHeight="41.0" fitWidth="42.0" layoutX="372.0" layoutY="272.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="bronzeDivition" fitHeight="41.0" fitWidth="42.0" layoutX="100.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="silverDivition" fitHeight="41.0" fitWidth="42.0" layoutX="230.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="goldDivition" fitHeight="41.0" fitWidth="42.0" layoutX="371.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="329.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="all have to be done on hard mode for it to count" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
